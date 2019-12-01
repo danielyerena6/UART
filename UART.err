@@ -1,0 +1,5 @@
+Compiling C:\Users\Danyh\Documents\Practica 2 microcontrolqadores\UART\UART on 26-nov.-19 at 08:04
+>>> Warning 203 "UART.c" Line 107(1,1): Condition always TRUE
+      Memory usage:   ROM=7%      RAM=3% - 6%
+      0 Errors,  1 Warnings.
+Build Successful.

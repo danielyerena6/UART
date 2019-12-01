@@ -1,0 +1,43 @@
+[fileformats]
+forcecoff=0
+
+[ProjectLog]
+Days=3
+D1=22-11-2019
+D1_L=1
+D1_L1=[85864]Project Opened.
+D2=23-11-2019
+D2_L=1
+D2_L1=[514]Started Editing.
+D3=26-11-2019
+D3_L=2
+D3_L1=[29392]Stopped Editing.
+TotalEdit=4797
+TotalDebug=0
+D3_E=4797
+D3_D=0
+D3_L2=[30519]Project Closed.
+
+[Opened Files]
+1=UART.c
+t1=70
+2=UART.h
+t2=8
+Count=2
+[PROJECT]
+Target=UART.hex
+Processor_Text=PIC18F46K42
+CCSVersion=5.076
+Compiler=PCH
+[Target Data]
+FileList=UART.c
+[UART.c]
+Type=4
+[mru-list]
+1=UART.c
+
+[defines]
+buildcount=10
+[Units]
+Count=1
+1=UART (main)

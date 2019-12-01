@@ -1,0 +1,229 @@
+#include <UART.h>
+#define LCD_ENABLE_PIN PIN_D0
+#define LCD_RS_PIN PIN_D1
+#define LCD_RW_PIN PIN_D2
+#define LCD_DATA4 PIN_D3
+#define LCD_DATA5 PIN_D4
+#define LCD_DATA6 PIN_D5
+#define LCD_DATA7 PIN_D6
+
+#include <lcd.c>
+#include <string.h>
+#include <stdlib.h>
+int1 flag=0;
+
+void menu()
+{  
+   
+   printf("\f   TEST UART MAIN MENU");
+   printf("\n\n\n   Choose an option:");
+   printf("\n\n   1. Turn ON Led.");
+   printf("\n\n   2. Turn OFF  Led.");
+   printf("\n\n   3. Print Menu.");
+   printf("\n\n   4. Read Voltage.");
+   printf("\n\n   5. Read Button State.");
+   printf("\n\n   6. Writte LCD.");
+   
+
+
+
+}
+
+void get_temperature()
+{
+  int i;
+  int16 ADC_VAL = 0;
+  float temp;
+  
+  for(i=0; i<16; i++)
+  {
+    delay_ms(31);
+    ADC_VAL += read_adc();
+  }
+  ADC_VAL /= 16;    //Average
+  temp = (float)ADC_VAL * 0.0009157;  //Input voltage
+  temp *= 100;  //K
+  temp -= 273.15; //C
+  
+   printf("\f   Digital ");
+   printf("\n  Thermometer ");
+   delay_ms(1000);
+  
+}
+
+void button()
+{
+   int1 boton=input(BTN);
+   printf("\f Button state:");
+   printf("\n    %d",boton);
+
+
+
+
+
+}
+
+
+
+void LCD()
+{
+   char option;
+   
+   
+   
+   
+   printf("\f   LCD MENU");
+   printf("\n\n\n   Choose an option:");
+   printf("\n\n   1. Clean LCD");
+   printf("\n\n   2. Writte LCD");
+   printf("\n\n   3. Show LCD Menu");
+   printf("\n\n   4. Show Main Menu.");
+   printf("\n\n   5. Exit.");
+   
+   if(kbhit())
+     {
+       option = getchar();
+      
+       switch(option)
+       {
+         case '1':
+           printf("\f)");
+         break;
+      
+         case '2':
+           while(1)
+           {
+            if(kbhit())
+            {
+               char escritura;
+               gets(escritura);
+               
+               if(escritura=='1' || escritura=='3' || escritura=='4' )
+               {
+                  printf(lcd_putc,"\n Press again");
+                  delay_ms(500);
+                  flag=1;
+                  return;
+                  
+               }
+               
+               if(escritura=='5')
+               {flag=0;
+               return;}
+               
+               printf(lcd_putc,"\f   You Writte: ");
+               printf(lcd_putc,"\n%c",escritura);
+               delay_ms(1000);
+            
+            }
+           
+           }
+         break;
+        
+         case '3':
+            printf("\f   LCD MENU");
+            printf("\n\n\n   Choose an option:");
+            printf("\n\n   1. Clean LCD");
+            printf("\n\n   2. Writte LCD");
+            printf("\n\n   3. Writte LCD Menu");
+            printf("\n\n   4. Writte Main Menu.");
+            printf("\n\n   5. Exit.");
+         break;
+         
+         
+         case '4':
+           menu();
+         break;
+         
+         
+         default:
+           fprintf(LAPTOP,"\n You have chosen an invalid option!");  
+         break;
+       }
+     }
+   
+   
+   
+     
+     
+     
+   
+
+
+}
+
+
+
+
+
+
+void main()
+{
+
+  char dummy1,rx_data;
+    
+   setup_adc_ports(sAN0);
+   setup_adc(ADC_AVERAGE_MODE|ADC_CLOCK_DIV_16|ADC_TAD_MUL_0|ADC_ADFLTR_TO_ADPREV_AT_START|ADC_THRESHOLD_INT_DISABLED);
+   output_low(LED);
+   lcd_init();
+   delay_ms(100);
+   printf(lcd_putc,"\f UART TEST!  :)");
+    
+   if(kbhit())
+   {
+     dummy1 = getc();
+   }
+    
+   delay_ms(1000);
+    
+   //Print menu on screen
+    menu();
+    
+   while(TRUE)
+   {
+     if(flag)
+     {lcd();}
+     if(kbhit())
+     {
+       rx_data = getchar();
+      
+       switch(rx_data)
+       {
+         case '1':
+           output_high(LED);
+           printf("\n LED is ON :)");
+         break;
+      
+         case '2':
+           output_low(LED);
+           printf("\n LED is OFF :(");
+         break;
+         
+         
+         case '3':
+           menu();
+         break;
+         
+         
+         case '4':
+            get_temperature();
+         break;
+         
+         case '5':
+            button();
+         break;
+         
+         case '6':
+            lcd();
+         break;
+         
+         
+        
+         default:
+           fprintf(LAPTOP,"\n You have chosen an invalid option!");  
+         break;
+       }
+     }  
+   }
+}
+

@@ -1,0 +1,139 @@
+ÀÄUART
+   ÀÄMAIN  0/310  Ram=3
+      ÃÄ@cinit1  (Inline)  Ram=0
+      ÃÄlcd_init  0/130  Ram=6
+      ³  ÃÄ@delay_ms1  0/40  Ram=1
+      ³  ÃÄlcd_send_nibble  0/70  Ram=1
+      ³  ÃÄ@delay_ms1  0/40  Ram=1
+      ³  ÃÄlcd_send_nibble  0/70  Ram=1
+      ³  ÃÄ@delay_ms1  0/40  Ram=1
+      ³  ÀÄlcd_send_byte  0/70  Ram=3
+      ³     ÃÄlcd_read_byte  0/76  Ram=3
+      ³     ³  ÃÄlcd_read_nibble  0/82  Ram=2
+      ³     ³  ÀÄlcd_read_nibble  0/82  Ram=2
+      ³     ÃÄlcd_send_nibble  0/70  Ram=1
+      ³     ÀÄlcd_send_nibble  0/70  Ram=1
+      ÃÄ@delay_ms1  0/40  Ram=1
+      ÃÄ@PSTRINGC_966  0/42  Ram=2
+      ³  ÀÄlcd_putc  0/80  Ram=1
+      ³     ÃÄlcd_gotoxy  0/34  Ram=4
+      ³     ³  ÀÄlcd_send_byte  0/70  Ram=3
+      ³     ³     ÀÄ*
+      ³     ÃÄlcd_send_byte  0/70  Ram=3
+      ³     ³  ÀÄ*
+      ³     ÃÄ@delay_ms1  0/40  Ram=1
+      ³     ÃÄlcd_gotoxy  0/34  Ram=4
+      ³     ³  ÀÄ*
+      ³     ÃÄlcd_send_byte  0/70  Ram=3
+      ³     ³  ÀÄ*
+      ³     ÀÄlcd_send_byte  0/70  Ram=3
+      ³        ÀÄ*
+      ÃÄ@GETCH_1_  0/68  Ram=1
+      ÃÄ@delay_ms1  0/40  Ram=1
+      ÃÄmenu  0/82  Ram=0
+      ³  ÃÄ@PSTRINGC_939  0/42  Ram=2
+      ³  ³  ÀÄ@PUTCHAR_1_  0/64  Ram=1
+      ³  ÃÄ@PSTRINGC_939  0/42  Ram=2
+      ³  ³  ÀÄ*
+      ³  ÃÄ@PSTRINGC_939  0/42  Ram=2
+      ³  ³  ÀÄ*
+      ³  ÃÄ@PSTRINGC_939  0/42  Ram=2
+      ³  ³  ÀÄ*
+      ³  ÃÄ@PSTRINGC_939  0/42  Ram=2
+      ³  ³  ÀÄ*
+      ³  ÃÄ@PSTRINGC_939  0/42  Ram=2
+      ³  ³  ÀÄ*
+      ³  ÃÄ@PSTRINGC_939  0/42  Ram=2
+      ³  ³  ÀÄ*
+      ³  ÀÄ@PSTRINGC_939  0/42  Ram=2
+      ³     ÀÄ*
+      ÃÄLCD  0/312  Ram=105
+      ³  ÃÄ@PSTRINGC_939  0/42  Ram=2
+      ³  ³  ÀÄ*
+      ³  ÃÄ@PSTRINGC_939  0/42  Ram=2
+      ³  ³  ÀÄ*
+      ³  ÃÄ@PSTRINGC_939  0/42  Ram=2
+      ³  ³  ÀÄ*
+      ³  ÃÄ@PSTRINGC_939  0/42  Ram=2
+      ³  ³  ÀÄ*
+      ³  ÃÄ@PSTRINGC_939  0/42  Ram=2
+      ³  ³  ÀÄ*
+      ³  ÃÄ@PSTRINGC_939  0/42  Ram=2
+      ³  ³  ÀÄ*
+      ³  ÃÄ@PSTRINGC_939  0/42  Ram=2
+      ³  ³  ÀÄ*
+      ³  ÃÄ@PSTRINGC_939  0/42  Ram=2
+      ³  ³  ÀÄ*
+      ³  ÃÄ@PSTRINGC_966  0/42  Ram=2
+      ³  ³  ÀÄ*
+      ³  ÃÄ@GETCH_1_  0/68  Ram=1
+      ³  ÃÄ@PUTCHAR_1_  0/64  Ram=1
+      ³  ÃÄ@PUTCHAR_1_  0/64  Ram=1
+      ³  ÃÄ@PUTCHAR_1_  0/64  Ram=1
+      ³  ÃÄlcd_putc  0/80  Ram=1
+      ³  ³  ÀÄ*
+      ³  ÃÄLCDMenu  0/64  Ram=0
+      ³  ³  ÃÄ@PSTRINGC_939  0/42  Ram=2
+      ³  ³  ³  ÀÄ*
+      ³  ³  ÃÄ@PSTRINGC_939  0/42  Ram=2
+      ³  ³  ³  ÀÄ*
+      ³  ³  ÃÄ@PSTRINGC_939  0/42  Ram=2
+      ³  ³  ³  ÀÄ*
+      ³  ³  ÃÄ@PSTRINGC_939  0/42  Ram=2
+      ³  ³  ³  ÀÄ*
+      ³  ³  ÃÄ@PSTRINGC_939  0/42  Ram=2
+      ³  ³  ³  ÀÄ*
+      ³  ³  ÀÄ@PSTRINGC_939  0/42  Ram=2
+      ³  ³     ÀÄ*
+      ³  ÃÄlcd_putc  0/80  Ram=1
+      ³  ³  ÀÄ*
+      ³  ÃÄlcd_putc  0/80  Ram=1
+      ³  ³  ÀÄ*
+      ³  ÀÄmenu  0/82  Ram=0
+      ³     ÀÄ*
+      ÃÄ@GETCH_1_  0/68  Ram=1
+      ÃÄ@PSTRINGC_939  0/42  Ram=2
+      ³  ÀÄ*
+      ÃÄ@PSTRINGC_939  0/42  Ram=2
+      ³  ÀÄ*
+      ÃÄmenu  0/82  Ram=0
+      ³  ÀÄ*
+      ÃÄget_temperature  0/328  Ram=11
+      ³  ÃÄ@delay_ms1  0/40  Ram=1
+      ³  ÃÄ@ITOF  0/56  Ram=2
+      ³  ÃÄ@MULFF  0/248  Ram=11
+      ³  ÃÄ@MULFF  0/248  Ram=11
+      ³  ÃÄ@ADDFF  0/620  Ram=16
+      ³  ÃÄ@PSTRINGC_939  0/42  Ram=2
+      ³  ³  ÀÄ*
+      ³  ÃÄ@PSTRINGC_939  0/42  Ram=2
+      ³  ³  ÀÄ*
+      ³  ÃÄ@PUTCHAR_1_  0/64  Ram=1
+      ³  ÃÄ@PUTCHAR_1_  0/64  Ram=1
+      ³  ÃÄ@PRINTF_L32D_939FPFPF  0/378  Ram=13
+      ³  ³  ÃÄ@MULFF  0/248  Ram=11
+      ³  ³  ÃÄ@FTOSD  0/64  Ram=5
+      ³  ³  ÃÄ@DIV3232  0/150  Ram=13
+      ³  ³  ÃÄ@PUTCHAR_1_  0/64  Ram=1
+      ³  ³  ÃÄ@PUTCHAR_1_  0/64  Ram=1
+      ³  ³  ÃÄ@PUTCHAR_1_  0/64  Ram=1
+      ³  ³  ÃÄ@PUTCHAR_1_  0/64  Ram=1
+      ³  ³  ÀÄ@DIV3232  0/150  Ram=13
+      ³  ÀÄ@delay_ms1  0/40  Ram=1
+      ÃÄbutton  0/56  Ram=2
+      ³  ÃÄ@PSTRINGC_939  0/42  Ram=2
+      ³  ³  ÀÄ*
+      ³  ÃÄ@PSTRINGCN_939  0/42  Ram=3
+      ³  ³  ÀÄ@PUTCHAR_1_  0/64  Ram=1
+      ³  ÀÄ@PRINTF_D_939  0/180  Ram=6
+      ³     ÃÄ@DIV88  0/40  Ram=3
+      ³     ÃÄ@DIV88  0/40  Ram=3
+      ³     ÃÄ@PUTCHAR_1_  0/64  Ram=1
+      ³     ÃÄ@PUTCHAR_1_  0/64  Ram=1
+      ³     ÃÄ@PUTCHAR_1_  0/64  Ram=1
+      ³     ÀÄ@PUTCHAR_1_  0/64  Ram=1
+      ÃÄLCD  0/312  Ram=105
+      ³  ÀÄ*
+      ÃÄ@PSTRINGCN_939  0/42  Ram=3
+      ³  ÀÄ*
+      ÀÄ@PUTCHAR_1_  0/64  Ram=1

@@ -1,0 +1,242 @@
+000     @SCRATCH
+001     @SCRATCH
+001     _RETURN_
+002     @SCRATCH
+003     @SCRATCH
+004-005 strtok.save
+006-009 _Randseed
+00A.0   flag
+00B-06E escritura
+06F     i
+070-071 @sprintf_string
+072     MAIN.dummy1
+073     MAIN.rx_data
+074.0   button.boton
+074     get_temperature.i
+074     lcd_init.i
+074-0D7 LCD.escritura
+074     MAIN.@SCRATCH1
+075-078 lcd_init.LCD_INIT_STRING
+075-076 get_temperature.ADC_VAL
+075     button.@SCRATCH1
+076     @PSTRINGCN_939.P1
+076     @PRINTF_D_939.P2
+077-07A get_temperature.temp
+077     @PRINTF_D_939.P1
+077     @PSTRINGCN_939.@SCRATCH1
+078     @PSTRINGCN_939.@SCRATCH2
+078     @PRINTF_D_939.@SCRATCH1
+079     lcd_init.@SCRATCH1
+079     @PRINTF_D_939.@SCRATCH2
+07A     @PRINTF_D_939.@SCRATCH3
+07B-07E @ADDFF.P1
+07B-07C @ITOF.P2
+07B-07E @PRINTF_L32D_939FPFPF.P3
+07B     get_temperature.@SCRATCH1
+07B     @PRINTF_D_939.@SCRATCH4
+07C     @DIV88.P1
+07C     get_temperature.@SCRATCH2
+07D     @DIV88.P1
+07D     get_temperature.@SCRATCH3
+07E     get_temperature.@SCRATCH4
+07E     @DIV88.@SCRATCH1
+07F-082 @ADDFF.P1
+07F     @PRINTF_L32D_939FPFPF.P2
+080     @PRINTF_L32D_939FPFPF.@SCRATCH1
+081     @PRINTF_L32D_939FPFPF.@SCRATCH2
+082     @PRINTF_L32D_939FPFPF.@SCRATCH3
+083     @ADDFF.@SCRATCH1
+083     @PRINTF_L32D_939FPFPF.@SCRATCH4
+084     @ADDFF.@SCRATCH2
+084     @PRINTF_L32D_939FPFPF.@SCRATCH5
+085     @ADDFF.@SCRATCH3
+085     @PRINTF_L32D_939FPFPF.@SCRATCH6
+086     @ADDFF.@SCRATCH4
+086     @PRINTF_L32D_939FPFPF.@SCRATCH7
+087     @ADDFF.@SCRATCH5
+087     @PRINTF_L32D_939FPFPF.@SCRATCH8
+088-08B @FTOSD.P1
+088-08B @DIV3232.P2
+088-08B @MULFF.P3
+088     @ADDFF.@SCRATCH6
+089     @ADDFF.@SCRATCH7
+08A     @ADDFF.@SCRATCH8
+08C-08F @MULFF.P1
+08C-08F @DIV3232.P2
+08C     @FTOSD.@SCRATCH1
+090     @MULFF.@SCRATCH1
+090     @DIV3232.@SCRATCH1
+091     @MULFF.@SCRATCH2
+091     @DIV3232.@SCRATCH2
+092     @MULFF.@SCRATCH3
+092     @DIV3232.@SCRATCH3
+093     @DIV3232.@SCRATCH4
+094     @DIV3232.@SCRATCH5
+0D8     LCD.i
+0D9     @PSTRINGC_939.@SCRATCH1
+0D9     LCD.@SCRATCH1
+0D9     @PSTRINGC_966.@SCRATCH1
+0DA     @PSTRINGC_939.@SCRATCH2
+0DA     LCD.@SCRATCH2
+0DA     @PSTRINGC_966.@SCRATCH2
+0DB     lcd_putc.c
+0DB     @PUTCHAR_1_.P1
+0DB     LCD.@SCRATCH3
+0DC     @delay_ms1.P1
+0DC     lcd_gotoxy.x
+0DC     LCD.@SCRATCH4
+0DD     lcd_gotoxy.y
+0DD     @GETCH_1_.@SCRATCH1
+0DE     lcd_gotoxy.address
+0DF     lcd_gotoxy.@SCRATCH1
+0E0     lcd_send_byte.address
+0E1     lcd_send_byte.n
+0E2     lcd_read_byte.low
+0E2     lcd_send_byte.@SCRATCH1
+0E3     lcd_read_byte.high
+0E3     lcd_send_nibble.n
+0E4     lcd_read_nibble.n
+0E4     lcd_read_byte.@SCRATCH1
+0E5     lcd_read_nibble.@SCRATCH1
+3C56.5  LC4OUT
+3C60.5  LC3OUT
+3C6A.5  LC2OUT
+3C74.5  LC1OUT
+3CFA.0  MDBIT
+3CFA.5  MDOUT
+3EB8.6  C2OUT
+3EBC.6  C1OUT
+3EC9.4  LVDRDY
+3EC9.5  LVDOUT
+3EFA.3  ADACLR
+3F3E.5  N1OUT
+3F62.5  PWM8OUT
+3F66.5  PWM7OUT
+3F6A.5  PWM6OUT
+3F6E.5  PWM5OUT
+3F70    CCP_4
+3F70    CCP_4_LOW
+3F71    CCP_4_HIGH
+3F74    CCP_3_LOW
+3F74    CCP_3
+3F75    CCP_3_HIGH
+3F78    CCP_2
+3F78    CCP_2_LOW
+3F79    CCP_2_HIGH
+3F7C    CCP_1
+3F7C    CCP_1_LOW
+3F7D    CCP_1_HIGH
+3FE1-3FE2 @READ_PACKED_MEMORY.P1
+3FE1-3FE2 @WRITE_PACKED_MEMORY.P2
+3FE9-3FEA @WRITE_PACKED_MEMORY.P1
+3FE9-3FEA @READ_PROGRAM_MEMORY.P2
+3FE9-3FEA @READ_PACKED_MEMORY.P3
+3FE9-3FEA @WRITE_PROGRAM_MEMORY.P4
+3FF6-3FF8 @WRITE_PROGRAM_MEMORY.P1
+3FF6-3FF8 @READ_PROGRAM_MEMORY.P2
+
+ROM Allocation:
+000004  @const1256.call
+00001C  @const1261.call
+000034  @const1262.call
+00004A  @const1263.call
+000062  @const1264.call
+000076  @const1265.call
+00008C  @const1266.call
+0000A8  @const1267.call
+0000BC  @const1272.call
+0000C8  @const1273.call
+0000D2  @const1285.call
+0000E4  @const1286.call
+0000EC  @const1296.call
+0000FE  @const1297.call
+000116  @const1298.call
+00012E  @const1299.call
+000146  @const1300.call
+00015C  @const1301.call
+00016C  @const1303.call
+00017E  @const1304.call
+000196  @const1305.call
+0001AE  @const1306.call
+0001C6  @const1307.call
+0001DC  @const1308.call
+0001EC  @const1309.call
+0001F8  @const1312.call
+000208  @const1313.call
+000212  @const1324.call
+000224  @const1325.call
+000234  @const1326.call
+000244  @const1327.call
+00026E  @delay_ms1
+000296  lcd_send_nibble
+0002DC  lcd_read_nibble
+00032E  lcd_read_byte
+00037A  lcd_send_byte
+0003C0  lcd_init
+000442  lcd_gotoxy
+000464  lcd_putc
+0004B4  @PSTRINGC_966
+0004DE  @GETCH_1_
+000522  @PUTCHAR_1_
+000562  @PSTRINGC_939
+00058C  menu
+0005DE  LCDMenu
+00061E  LCD
+000756  @ITOF
+00078E  @MULFF
+000886  @ADDFF
+000AF2  @FTOSD
+000B32  @DIV3232
+000BC8  @PRINTF_L32D_939FPFPF
+000D42  get_temperature
+000E8A  @PSTRINGCN_939
+000EB4  @DIV88
+000EDC  @PRINTF_D_939
+000F90  button
+000FC8  MAIN
+000FC8  @cinit1
+00100C  @cinit2
+0136  StrtoulGO
+0136  StrtolGO
+
+Project Directory:
+    C:\Users\Danyh\Documents\Practica 2 microcontrolqadores\UART\
+
+Project Files:
+    UART.c                                                  [26-nov.-19 08:04  CRC=F172714D]
+    UART.h                                                  [13-nov.-19 16:49  CRC=0E150317]
+    ..\..\..\..\..\Program Files (x86)\PICC\Devices\18F46K42.h [15-ene.-18 14:58  CRC=5FF81C3A]
+    ..\..\..\..\..\Program Files (x86)\PICC\Drivers\lcd.c   [22-feb.-16 08:05  CRC=D1A6378A]
+    ..\..\..\..\..\Program Files (x86)\PICC\Drivers\string.h [26-mar.-15 11:34  CRC=C4814297]
+    ..\..\..\..\..\Program Files (x86)\PICC\Drivers\stddef.h [05-sep.-14 10:47  CRC=897CEC6C]
+    ..\..\..\..\..\Program Files (x86)\PICC\Drivers\ctype.h [03-ene.-08 13:55  CRC=2D1F019F]
+    ..\..\..\..\..\Program Files (x86)\PICC\Drivers\stdlib.h [29-jun.-16 08:34  CRC=7E9CC16B]
+
+Source signature=A97C7BA0
+Program memory checksum=0000
+Program memory CRC=0000
+Hex file CRC=6FFD
+
+Units:
+    UART (main)
+
+Compiler Settings:
+    Processor:      PIC18F46K42
+    Pointer Size:   16
+    ADC Range:      0-4095
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+    Compile Mode:       CCS5
+
+Output Files:
+    XREF file:   UART.xsym
+    Errors:      UART.err
+    Ext Symbols: UART.esym
+    INHX32:      UART.hex
+    Symbols:     UART.sym
+    List:        UART.lst
+    Debug/COFF:  UART.cof
+    Project:     UART.ccspjt
+    Call Tree:   UART.tre
+    Statistics:  UART.STA
